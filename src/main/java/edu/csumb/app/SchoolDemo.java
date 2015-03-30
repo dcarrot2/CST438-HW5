@@ -8,7 +8,7 @@ public class SchoolDemo {
 		Course course1;
 		
 		System.out.println("===== Read Data =====");
-		itcd.readData("/Users/Algernon/Documents/fall2014/cst238/project1/src/test1.txt");
+		itcd.readData("test1.txt");
 		
 		System.out.println("\n===== School Info =====");
 		itcd.schoolInfo();
