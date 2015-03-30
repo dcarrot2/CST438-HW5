@@ -60,10 +60,13 @@ public class School
 		int addMode = 0; // read instructors, courses or students
 		try {
 			File file = new File(filePath);
+			file = new File(file.getAbsolutePath());
 			reader = new Scanner(file);
 
 			while (reader.hasNext()) {
+				
 				int amount = reader.nextInt();
+
 				for (int i = 0; i <= amount; i++) {
 					line = reader.nextLine().split(","); // split string by
 															// commas
@@ -73,7 +76,7 @@ public class School
 				addMode += 1; // we're done adding a group of data, let's move
 								// to the next
 			}
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
